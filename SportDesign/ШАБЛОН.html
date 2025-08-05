@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СпортДизайн - Пошив спортивной одежды на заказ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .custom-radio input:checked+span {
+            background-color: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #3b82f6;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div
+                    class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    СД</div>
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800">Спорт<span class="text-blue-600">Дизайн</span>
+                </h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Главная</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Услуги</a>
+                <a href="#portfolio"
+                    class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Портфолио</a>
+                <a href="#process" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Процесс</a>
+                <a href="#reviews" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Отзывы</a>
+                <a href="#contact"
+                    class="nav-link text-gray-700 hover:text-blue-600 font-medium transition">Контакты</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="tel:+79991234567" class="hidden md:flex items-center text-gray-700 hover:text-blue-600">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+7 (999) 123-45-67</span>
+                </a>
+                <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Главная</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Услуги</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium">Портфолио</a>
+                <a href="#process" class="text-gray-700 hover:text-blue-600 font-medium">Процесс</a>
+                <a href="#reviews" class="text-gray-700 hover:text-blue-600 font-medium">Отзывы</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Контакты</a>
+                <a href="tel:+79991234567" class="flex items-center text-gray-700 hover:text-blue-600">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    <span>+7 (999) 123-45-67</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 slide-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Профессиональный пошив
+                    спортивной одежды</h1>
+                <p class="text-xl mb-8 opacity-90">Индивидуальный дизайн, качественные материалы и идеальная посадка для
+                    ваших побед</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact"
+                        class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                        Заказать сейчас
+                    </a>
+                    <a href="#portfolio"
+                        class="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                        Наши работы
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in">
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Спортивная одежда" class="rounded-lg shadow-2xl max-w-full h-auto hover-scale">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Качество материалов</h3>
+                    <p class="text-gray-600">Используем только высококачественные, дышащие ткани с повышенной
+                        износостойкостью</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ruler-combined text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Индивидуальный пошив</h3>
+                    <p class="text-gray-600">Одежда шьётся по вашим меркам, обеспечивая идеальную посадку и комфорт</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Уникальный дизайн</h3>
+                    <p class="text-gray-600">Создаем эксклюзивный дизайн, отражающий ваш стиль и корпоративную
+                        идентичность</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Наши услуги</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Форма для команд" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Форма для команд</h3>
+                        <p class="text-gray-600 mb-4">Пошив спортивной формы для футбольных, баскетбольных, волейбольных
+                            и других команд с уникальным дизайном</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">от 5 000 ₽</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium">Заказать →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c955ad725a66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Индивидуальная экипировка" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Индивидуальная экипировка</h3>
+                        <p class="text-gray-600 mb-4">Пошив персональной спортивной одежды для тренировок и соревнований
+                            по вашим меркам</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">от 3 500 ₽</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium">Заказать →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-scale transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Корпоративная спортивная одежда" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Корпоративная одежда</h3>
+                        <p class="text-gray-600 mb-4">Создание спортивной одежды с фирменной символикой для сотрудников
+                            и корпоративных мероприятий</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-blue-600">от 4 200 ₽</span>
+                            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium">Заказать →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Наши работы</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Футбольная форма" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Футбольная форма для "Старт-Юниор"</h3>
+                            <p class="text-gray-200">Комплект из футболки, шорт и гетр с индивидуальным дизайном</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                        alt="Баскетбольная форма" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Баскетбольная форма для "Высота"</h3>
+                            <p class="text-gray-200">Домашний и выездной комплекты с фирменной символикой</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Беговая экипировка" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Беговая экипировка для марафона</h3>
+                            <p class="text-gray-200">Легкая дышащая форма для профессиональных бегунов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6efb9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Тренировочный костюм" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Тренировочный костюм "Профи"</h3>
+                            <p class="text-gray-200">Утепленный костюм для тренировок в холодное время года</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Форма для тенниса" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Форма для теннисного клуба</h3>
+                            <p class="text-gray-200">Стильная экипировка для профессиональных теннисистов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="relative group overflow-hidden rounded-lg shadow-lg hover-scale transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Корпоративная форма" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-2">Корпоративная форма для фитнес-центра</h3>
+                            <p class="text-gray-200">Униформа для тренеров и персонала с логотипом компании</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact"
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                    Заказать индивидуальный дизайн
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Как мы работаем</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-blue-200 transform -translate-x-1/2"></div>
+
+                <!-- Process steps -->
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse mb-12 md:mb-24">
+                        <div class="md:w-1/2 mb-6 md:mb-0 px-4 md:px-8 slide-up">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        1</div>
+                                    <h3 class="text-xl font-bold text-gray-800">Консультация и замеры</h3>
+                                </div>
+                                <p class="text-gray-600">Мы обсуждаем ваши потребности, предпочтения и проводим точные
+                                    замеры для идеальной посадки одежды</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 px-4 md:px-8 flex justify-center fade-in">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Консультация" class="rounded-lg shadow-md w-full max-w-md hover-scale">
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse mb-12 md:mb-24">
+                        <div class="md:w-1/2 mb-6 md:mb-0 px-4 md:px-8 slide-up">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        2</div>
+                                    <h3 class="text-xl font-bold text-gray-800">Разработка дизайна</h3>
+                                </div>
+                                <p class="text-gray-600">Наши дизайнеры создают уникальный эскиз с учетом ваших
+                                    пожеланий и особенностей вида спорта</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 px-4 md:px-8 flex justify-center fade-in">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                                alt="Разработка дизайна" class="rounded-lg shadow-md w-full max-w-md hover-scale">
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse mb-12 md:mb-24">
+                        <div class="md:w-1/2 mb-6 md:mb-0 px-4 md:px-8 slide-up">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        3</div>
+                                    <h3 class="text-xl font-bold text-gray-800">Подбор материалов</h3>
+                                </div>
+                                <p class="text-gray-600">Выбираем оптимальные ткани и фурнитуру, учитывая
+                                    функциональность, комфорт и долговечность</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 px-4 md:px-8 flex justify-center fade-in">
+                            <img src="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1518&q=80"
+                                alt="Подбор материалов" class="rounded-lg shadow-md w-full max-w-md hover-scale">
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 px-4 md:px-8 slide-up">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        4</div>
+                                    <h3 class="text-xl font-bold text-gray-800">Пошив и доставка</h3>
+                                </div>
+                                <p class="text-gray-600">Опытные мастера выполняют пошив, после чего мы доставляем
+                                    готовую продукцию в указанное место</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 px-4 md:px-8 flex justify-center fade-in">
+                            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                alt="Пошив и доставка" class="rounded-lg shadow-md w-full max-w-md hover-scale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Отзывы клиентов</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl font-bold mr-4">
+                            АК</div>
+                        <div>
+                            <h4 class="font-bold">Алексей Ковалев</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Заказывал форму для футбольной команды. Качество пошива на высшем
+                        уровне, форма не выцветает после множества стирок. Дизайн помогли разработать с нуля -
+                        получилось именно то, что хотел!"</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl font-bold mr-4">
+                            МС</div>
+                        <div>
+                            <h4 class="font-bold">Мария Семенова</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Шью у них экипировку для бега уже третий год. Одежда действительно
+                        удобная, не сковывает движения. Особенно нравятся индивидуальные решения - например, специальный
+                        карман для ключей и телефона."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-scale transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl font-bold mr-4">
+                            ДИ</div>
+                        <div>
+                            <h4 class="font-bold">Дмитрий Иванов</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Заказали корпоративную спортивную форму для сотрудников. Учтены все
+                        пожелания по цветам и логотипам. Сроки изготовления соблюдены, хотя заказ был крупный.
+                        Рекомендую!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Свяжитесь с нами</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Оставьте заявку</h3>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Тип заказа</label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <label class="custom-radio flex items-center">
+                                        <input type="radio" name="order_type" value="team" class="hidden" checked>
+                                        <span
+                                            class="w-full py-2 px-4 border border-gray-300 rounded-lg text-center cursor-pointer transition">Командная
+                                            форма</span>
+                                    </label>
+                                    <label class="custom-radio flex items-center">
+                                        <input type="radio" name="order_type" value="individual" class="hidden">
+                                        <span
+                                            class="w-full py-2 px-4 border border-gray-300 rounded-lg text-center cursor-pointer transition">Индивидуальная</span>
+                                    </label>
+                                    <label class="custom-radio flex items-center">
+                                        <input type="radio" name="order_type" value="corporate" class="hidden">
+                                        <span
+                                            class="w-full py-2 px-4 border border-gray-300 rounded-lg text-center cursor-pointer transition">Корпоративная</span>
+                                    </label>
+                                    <label class="custom-radio flex items-center">
+                                        <input type="radio" name="order_type" value="other" class="hidden">
+                                        <span
+                                            class="w-full py-2 px-4 border border-gray-300 rounded-lg text-center cursor-pointer transition">Другое</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                                <textarea id="message" name="message" rows="4"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 slide-up">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold mb-6">Контактная информация</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Адрес</h4>
+                                    <p class="text-gray-600">г. Москва, ул. Спортивная, д. 15, офис 42</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Телефоны</h4>
+                                    <p class="text-gray-600 mb-1">+7 (999) 123-45-67</p>
+                                    <p class="text-gray-600">+7 (495) 765-43-21</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@sportdesign.ru</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Режим работы</h4>
+                                    <p class="text-gray-600 mb-1">Пн-Пт: 9:00 - 18:00</p>
+                                    <p class="text-gray-600">Сб: 10:00 - 15:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Мы в социальных сетях</h4>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="w-10 h-10 bg-blue-100 hover:bg-blue-200 rounded-full flex items-center justify-center text-blue-600 transition">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-blue-100 hover:bg-blue-200 rounded-full flex items-center justify-center text-blue-600 transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-blue-100 hover:bg-blue-200 rounded-full flex items-center justify-center text-blue-600 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-blue-100 hover:bg-blue-200 rounded-full flex items-center justify-center text-blue-600 transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789717039!2d37.61842331593096!3d55.75370398055362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0YPQuy4sIDE1LCDQnNC-0YHQutCy0LAsIDExOTAxNQ!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                class="rounded-lg shadow-md"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Часто задаваемые вопросы</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition">
+                        <h3 class="text-lg font-medium text-left">Как долго выполняется заказ?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-2">
+                        <p class="text-gray-600">Срок выполнения заказа зависит от сложности и объема работы. Обычно
+                            индивидуальный пошив занимает от 7 до 14 дней, а командная форма - от 2 до 4 недель. Точные
+                            сроки мы уточняем после обсуждения всех деталей заказа.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition">
+                        <h3 class="text-lg font-medium text-left">Какие ткани вы используете?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-2">
+                        <p class="text-gray-600">Мы работаем только с качественными спортивными тканями от проверенных
+                            производителей. В основном это современные синтетические материалы с добавлением хлопка,
+                            которые обеспечивают хорошую воздухопроницаемость, отвод влаги и долговечность. На
+                            консультации мы поможем подобрать оптимальный вариант для вашего вида спорта.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition">
+                        <h3 class="text-lg font-medium text-left">Можно ли разработать полностью индивидуальный дизайн?
+                        </h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-2">
+                        <p class="text-gray-600">Да, наши дизайнеры готовы разработать для вас уникальный дизайн с нуля.
+                            Вы можете предоставить свои эскизы или описать идею, а мы воплотим ее в жизнь. Также у нас
+                            есть каталог готовых решений, которые можно адаптировать под ваши потребности.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition">
+                        <h3 class="text-lg font-medium text-left">Как происходит оплата?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-2">
+                        <p class="text-gray-600">Для начала работы требуется предоплата 30% от суммы заказа. Оставшаяся
+                            часть оплачивается после примерки и утверждения готового изделия. Мы принимаем наличные,
+                            банковские карты и безналичный расчет для юридических лиц.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-6 bg-gray-50 hover:bg-gray-100 transition">
+                        <h3 class="text-lg font-medium text-left">Делаете ли вы доставку в другие города?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-2">
+                        <p class="text-gray-600">Да, мы отправляем заказы по всей России транспортными компаниями.
+                            Стоимость доставки рассчитывается индивидуально в зависимости от объема заказа и выбранной
+                            транспортной компании. Для командных заказов возможна бесплатная доставка при определенных
+                            условиях.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 slide-up">Готовы заказать спортивную одежду?</h2>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto fade-in">Оставьте заявку прямо сейчас и получите
+                бесплатную консультацию нашего специалиста</p>
+            <a href="#contact"
+                class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                Оставить заявку
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                            СД</div>
+                        <h3 class="text-xl font-bold">Спорт<span class="text-blue-400">Дизайн</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Профессиональный пошив спортивной одежды на заказ с 2010 года</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Форма для команд</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Индивидуальная экипировка</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Корпоративная одежда</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Дизайн и брендирование</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Компания</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">О нас</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Портфолио</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Отзывы</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Вакансии</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">г. Москва, ул. Спортивная, д. 15</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+7 (999) 123-45-67</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@sportdesign.ru</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Пн-Пт: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2999 СпортДизайн. Все права защищены.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Here you would normally send the form data to the server
+            // For demo purposes, we'll just show an alert
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
