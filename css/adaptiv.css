@@ -20,14 +20,353 @@
         display: flex;
         gap: 10px;
         padding-bottom: 30px;
-        flex-direction: column;
     }
 
     .main_face-title {
         font-size: 42px;
     }
 
+    .stepwork_namber {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .stepwork_namber img {
+        width: 350px;
+        height: 200px;
+        border-radius: 20px;
+        margin: 40px;
+        box-shadow: 5px 5px 20px 5px rgba(0, 0, 0.1, 0.8);
+    }
+
+    .stepwork_namber-content {
+        background-color: rgb(230, 230, 230);
+        width: 500px;
+        height: 200px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0.1, 0.3);
+        border-radius: 20px;
+    }
+
+    .verticalLine {
+        border-left: 6px solid hsla(224, 61%, 47%, 0.363);
+        height: 1200px;
+        position: absolute;
+        left: 50%;
+
+
+    }
+
+    .stepwork {
+        background: rgb(249 250 251);
+        height: 1400px;
+    }
+
+    .advantages_item-title {
+        text-align: center;
+        color: black;
+        font-size: 22px;
+        font-weight: 700;
+        padding-top: 20px;
+    }
 
 
 
+
+
+
+}
+
+
+@media (max-width: 1225px) {
+
+    .advantages_item-title {
+        text-align: center;
+        color: black;
+        font-size: 22px;
+        font-weight: 700;
+        padding-top: 20px;
+    }
+
+    .works_card-title {
+        display: none;
+    }
+
+    .works_card:hover .works_card-title {
+        display: none;
+    }
+
+    .works_card:hover .works_card-text {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 1200px) {
+
+    .service-price {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .comment_cart-text {
+        font-size: 12px;
+    }
+
+    .header_tel {
+        display: none;
+    }
+
+    .main_face-title {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 950px) {
+    .main_face-title {
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 914px) {
+    .stepwork_namber-text {
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+}
+
+@media (max-width: 855px) {
+    .main_face-title {
+        font-size: 24px;
+    }
+
+    .main_face-subtitle {
+        padding-top: 10px;
+    }
+
+    .main_face-btn {
+        gap: 10px;
+
+
+    }
+
+    .advantages_item-text {
+        padding-top: 5px;
+    }
+
+    .sevice_item-price {
+        display: none;
+    }
+
+    .service_item-img {
+        height: 150px;
+    }
+
+    .contast_btn {
+        width: 100%;
+    }
+
+    .container_accordion {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .footer_wrap {
+        flex-wrap: wrap;
+
+    }
+
+    .advantages_wrap {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .advantages_item {
+        height: 100%;
+    }
+
+    .stepwork_namber-num {
+        display: none;
+    }
+
+    .stepwork_namber-title {
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .service_item {
+        height: 100%;
+    }
+
+    .works_btn {
+        font-size: 12px;
+    }
+
+    .comment_cart {
+        margin-top: 10px;
+
+    }
+
+    .comment_wrap {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+
+    .comment_cart-nametitle {
+        font-size: 12px;
+    }
+
+    .comment_cart-avatar {
+        font-size: 12px;
+    }
+
+    .main_title {
+        font-size: 34px;
+    }
+
+    .stepwork {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact_info-subtitle {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 826px) {
+
+    .container-step-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .service-wrap {
+        padding-top: 20px;
+        display: flex;
+        gap: 30px;
+        padding-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .main_face-title {
+        font-size: 16px;
+    }
+
+    .main_face-subtitle {
+        font-size: 12px;
+        padding-top: 7px;
+    }
+
+    .main_face-btn {
+        display: none;
+
+    }
+
+    .header_menu {
+        display: none;
+    }
+
+    .header-wrapper {
+        display: flex;
+        padding: 25px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .service-wrap {
+        padding-top: 20px;
+        display: flex;
+        padding-bottom: 40px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .works {
+        display: none;
+    }
+
+    .stepwork_namber img {
+        display: none;
+    }
+
+    .stepwork_namber-num {
+        display: block;
+        background-color: rgb(37 99 235);
+        border-radius: 9999px;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 30px;
+        color: white;
+        /* padding-top: 10px; */
+    }
+
+
+    .comment_wrap {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .contact_wrap {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        padding-bottom: 60px;
+        flex-direction: column;
+    }
+
+    .contact_call-card {
+        height: 100%;
+        width: 100%;
+    }
+
+    .contact_info-card {
+        height: 100%;
+        width: 100%;
+    }
+
+    .comment_cart {
+        height: 100%;
+    }
+
+    .accordion {
+        display: none;
+    }
+
+    .promo_btn {
+        width: 100%;
+    }
+
+    .promo_title {
+        font-size: 34px;
+    }
+
+    .stepwork_namber-content {
+        height: 100%;
+        width: 100%;
+    }
 }
